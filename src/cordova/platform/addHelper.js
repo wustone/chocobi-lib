@@ -290,6 +290,7 @@ function getVersionFromConfigFile (platform, cfg) {
 // Downloads via npm or via git clone (tries both)
 // Returns a Promise
 function downloadPlatform (projectRoot, platform, version, opts) {
+    
     events.emit('log', 'version : ' + version);
     var target = version ? (platform + '@' + version) : platform;
     return Q().then(function () {

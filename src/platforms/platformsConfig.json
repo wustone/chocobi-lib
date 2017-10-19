@@ -2,7 +2,7 @@
     "ios": {
         "hostos": ["darwin"],
         "url": "https://github.com/wustone/chocobi-ios.git",
-        "version": "~0.0.3",
+        "version": "0.0.3",
         "apiCompatibleSince": "4.0.0",
         "deprecated": false
     },

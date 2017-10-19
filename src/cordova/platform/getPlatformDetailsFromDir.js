@@ -62,10 +62,10 @@ function getPlatformDetailsFromDir (dir, platformIfKnown) {
  */
 function platformFromName (name) {
     var platName = name;
-    var platMatch = /^cordova-([a-z0-9-]+)$/.exec(name);
+    var platMatch = /^chocobi-([a-z0-9-]+)$/.exec(name);
     if (platMatch && (platMatch[1] in platforms)) {
         platName = platMatch[1];
-        events.emit('verbose', 'Removing "cordova-" prefix from ' + name);
+        events.emit('verbose', 'Removing "chocobi-" prefix from ' + name);
     }
     return platName;
 }
