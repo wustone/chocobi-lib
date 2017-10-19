@@ -106,8 +106,8 @@ function addHelper (cmd, hooksRunner, projectRoot, targets, opts) {
                     // If there is no spec specified, try to get spec from package.json
                     // else, if there is no spec specified, try to get spec from config.xml
                     if (spec === undefined && pkgJson && pkgJson.dependencies && cmd === 'add') {
-                        if (pkgJson.dependencies['cordova-' + platform]) {
-                            spec = pkgJson.dependencies['cordova-' + platform];
+                        if (pkgJson.dependencies['chocobi-' + platform]) {
+                            spec = pkgJson.dependencies['chocobi-' + platform];
                         } else if (pkgJson.dependencies[platform]) {
                             spec = pkgJson.dependencies[platform];
                         }
@@ -296,14 +296,14 @@ function downloadPlatform (projectRoot, platform, version, opts) {
         if (opts.fetch) {
             // append cordova to platform
             if (platform in platforms) {
-                target = 'cordova-' + target;
+                target = 'chocobi-' + target;
             }
 
             // gitURLs don't supply a platform, it equals null
             if (!platform) {
                 target = version;
             }
-            events.emit('log', 'Using cordova-fetch for ' + target);
+            events.emit('log', 'Using chocobi-fetch for ' + target);
             return fetch(target, projectRoot, opts);
         }
 
